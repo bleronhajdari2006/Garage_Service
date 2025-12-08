@@ -7,26 +7,41 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Garage Service</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="service.html">Services</a></li>
-        <li><a href="login.html">Login/Register</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="topbar">
+      <div class="container">
+        <div class="logo">Garage Service</div>
+        <div class="contact">
+          <div class="phone">Call us: <a href="tel:+15551234567">(555) 123-4567</a></div>
+          <a class="btn book" href="service.html">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container nav-wrap">
+      <nav class="main-nav">
+        <a class="nav-logo" href="index.html">Garage Service</a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="login.html">Login/Register</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main class="container">
     <h2>About Us</h2>
     <p>Garage Service has been serving the local community for over 10 years with professional car repair and maintenance services.</p>
     <p>Our mission is to provide reliable, efficient, and affordable automotive services for all types of vehicles.</p>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Garage Service. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-left">&copy; 2025 Garage Service</div>
+      <div class="footer-right">123 Main St, Anytown • <a href="mailto:info@example.com">info@example.com</a></div>
+    </div>
   </footer>
 </body>
 </html>

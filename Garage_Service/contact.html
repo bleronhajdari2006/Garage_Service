@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Garage Service - Services</title>
+  <title>Contact Us - Garage Service</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
         <div class="logo">Garage Service</div>
         <div class="contact">
           <div class="phone">Call us: <a href="tel:+15551234567">(555) 123-4567</a></div>
-          <a class="btn book" href="service.html">Book Now</a>
+          <a class="btn book" href="book.html">Book Now</a>
         </div>
       </div>
     </div>
@@ -32,27 +32,27 @@
   </header>
 
   <main class="container">
-    <h2>Our Services</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="icon">🛢️</div>
-        <h3>Oil Change</h3>
-        <p>Professional oil change service.</p>
-        <a href="service-detail.html?service=oil" class="btn small">Details</a>
-      </div>
-      <div class="service-card">
-        <div class="icon">🛠️</div>
-        <h3>Brake Repair</h3>
-        <p>Reliable brake maintenance and repair.</p>
-        <a href="service-detail.html?service=brake" class="btn small">Details</a>
-      </div>
-      <div class="service-card">
-        <div class="icon">🛞</div>
-        <h3>Tire Replacement</h3>
-        <p>Tire installation, balancing, and rotation.</p>
-        <a href="service-detail.html?service=tire" class="btn small">Details</a>
-      </div>
+    <h1>Contact Us</h1>
+    <p>If you have questions or need assistance, use the form below or reach us at the phone number and email listed.</p>
+
+    <div class="contact-info">
+      <p><strong>Phone:</strong> <a href="tel:+15551234567">(555) 123-4567</a></p>
+      <p><strong>Email:</strong> <a href="mailto:info@example.com">info@example.com</a></p>
+      <p><strong>Address:</strong> 123 Main St, Anytown</p>
     </div>
+
+    <form id="contactForm" class="form">
+      <label for="name">Your name</label>
+      <input id="name" name="name" type="text" required>
+
+      <label for="email">Your email</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button class="btn primary" type="submit">Send Message</button>
+    </form>
   </main>
 
   <footer class="site-footer">
@@ -61,5 +61,7 @@
       <div class="footer-right">123 Main St, Anytown • <a href="mailto:info@example.com">info@example.com</a></div>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

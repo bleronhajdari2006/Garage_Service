@@ -1,72 +1,225 @@
+:root {
+  --primary: #d32f2f;
+  --dark: #222;
+  --muted: #666;
+  --container: 1100px;
+}
+
+* {
+  box-sizing: border-box
+}
+
+html, body { height: 100%; }
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background: #333;
-  color: white;
-  padding: 15px;
-}
-
-header h1 {
-  margin: 0;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
   display: flex;
-  gap: 15px;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Inter, Arial, sans-serif;
+  margin: 0;
+  color: var(--dark);
+  line-height: 1.45;
 }
 
-nav ul li a {
-  color: white;
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 16px
+}
+
+.topbar {
+  background: var(--dark);
+  color: #fff;
+  padding: 10px 0
+}
+
+.topbar .logo {
+  font-weight: 700;
+  font-size: 20px
+}
+
+.topbar .contact {
+  float: right
+}
+
+.topbar .contact a {
+  color: #fff;
+  text-decoration: none
+}
+
+.topbar .book {
+  background: var(--primary);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
   text-decoration: none;
+  margin-left: 12px
 }
 
-main {
-  padding: 20px;
+.nav-wrap {
+  background: #fff;
+  border-bottom: 1px solid #eee
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.main-nav a {
+  color: var(--dark);
+  text-decoration: none
+}
+
+.nav-logo {
+  font-weight: 700
 }
 
 .hero {
-  background: #f4f4f4;
-  padding: 20px;
-  text-align: center;
+  background: linear-gradient(90deg, #f7f7f7 0%, #fff 100%);
+  padding: 48px 0
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 30px
+}
+
+.hero-copy {
+  flex: 1
+}
+
+.hero-copy h1 {
+  font-size: 34px;
+  margin: 0 0 12px
+}
+
+.hero-copy p {
+  color: var(--muted);
+  margin: 0 0 18px
+}
+
+.hero-cta .btn {
+  margin-right: 12px
+}
+
+.hero-visual {
+  width: 300px;
+  text-align: center
+}
+
+.hero-image {
+  font-size: 96px
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: #fff
+}
+
+.btn.outline {
+  border: 1px solid #ccc;
+  color: var(--dark);
+  background: transparent
+}
+
+.btn.small {
+  padding: 8px 12px;
+  font-size: 14px
+}
+
+.services-preview {
+  padding: 48px 0
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px
 }
 
 .service-card {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin: 10px 0;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  text-align: center
 }
 
-form {
-  margin: 15px 0;
+.service-card .icon {
+  font-size: 32px;
+  margin-bottom: 10px
+}
+
+.why-us {
+  padding: 32px 0;
+  background: #fafafa
+}
+
+.why-grid {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  justify-content: space-between
 }
 
-form input {
-  padding: 8px;
-  font-size: 16px;
+.site-footer {
+  background: #111;
+  color: #ddd;
+  padding: 18px 0;
 }
 
-form button {
-  padding: 10px;
-  font-size: 16px;
-  background: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
+/* Make main take remaining space so footer stays at bottom */
+main { flex: 1; }
+
+.site-footer a {
+  color: #fff;
+  text-decoration: none
 }
 
-footer {
-  background: #411717;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
+/* Responsive tweaks */
+@media(max-width:800px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center
+  }
+
+/* Form styles (global) */
+form.form{max-width:520px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+form label{font-weight:600;color:var(--muted)}
+form input, form textarea, form select{padding:10px;border:1px solid #e0e0e0;border-radius:6px;font-size:15px}
+form button{border:none;cursor:pointer}
+/* make native buttons match .btn styles */
+button.btn{display:inline-block;padding:10px 16px;border-radius:6px;text-decoration:none}
+button.btn.primary{background:var(--primary);color:#fff}
+
+/* Small utility */
+.text-center{text-align:center}
+
+  .topbar .contact {
+    float: none;
+    margin-top: 8px;
+    text-align: center
+  }
+
+  .why-grid {
+    flex-direction: column;
+    gap: 8px
+  }
 }
