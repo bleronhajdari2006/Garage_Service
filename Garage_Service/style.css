@@ -1,7 +1,7 @@
 :root {
-  --primary: #d32f2f;
-  --dark: #222;
-  --muted: #666;
+  --primary: #f70000fa;
+  --dark: #ff670f;
+  --muted: #1b1249;
   --container: 1100px;
 }
 
@@ -9,15 +9,19 @@
   box-sizing: border-box
 }
 
-html, body { height: 100%; }
+html,
+body {
+  height: 100%;
+}
+
+
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: Inter, Arial, sans-serif;
+ font-family: Inter, Arial, sans-serif;
   margin: 0;
-  color: var(--dark);
-  line-height: 1.45;
+  padding: 0;
 }
 
 .container {
@@ -48,8 +52,11 @@ body {
 
 .topbar .book {
   background: var(--primary);
-  color: #fff;
+  color: #916b6b;
   padding: 8px 12px;
+
+
+
   border-radius: 4px;
   text-decoration: none;
   margin-left: 12px
@@ -81,78 +88,19 @@ body {
 }
 
 .nav-logo {
+
+
+
+
+
+
   font-weight: 700
 }
 
 .hero {
-  background: linear-gradient(90deg, #f7f7f7 0%, #fff 100%);
-  padding: 48px 0
-}
-
-.hero-inner {
-  display: flex;
-  align-items: center;
-  gap: 30px
-}
-
-.hero-copy {
-  flex: 1
-}
-
-.hero-copy h1 {
-  font-size: 34px;
-  margin: 0 0 12px
-}
-
-.hero-copy p {
-  color: var(--muted);
-  margin: 0 0 18px
-}
-
-.hero-cta .btn {
-  margin-right: 12px
-}
-
-.hero-visual {
-  width: 300px;
-  text-align: center
-}
-
-.hero-image {
-  font-size: 96px
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 16px;
-  border-radius: 6px;
-  text-decoration: none
-}
-
-.btn.primary {
-  background: var(--primary);
-  color: #fff
-}
-
-.btn.outline {
-  border: 1px solid #ccc;
-  color: var(--dark);
-  background: transparent
-}
-
-.btn.small {
-  padding: 8px 12px;
-  font-size: 14px
-}
-
-.services-preview {
-  padding: 48px 0
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px
+  background: #f4f4f4;
+  padding: 20px;
+  text-align: center;
 }
 
 .service-card {
@@ -173,6 +121,7 @@ body {
   background: #fafafa
 }
 
+
 .why-grid {
   display: flex;
   gap: 12px;
@@ -182,11 +131,16 @@ body {
 .site-footer {
   background: #111;
   color: #ddd;
+
+
+
   padding: 18px 0;
 }
 
 /* Make main take remaining space so footer stays at bottom */
-main { flex: 1; }
+main {
+  flex: 1;
+}
 
 .site-footer a {
   color: #fff;
@@ -200,17 +154,51 @@ main { flex: 1; }
     text-align: center
   }
 
-/* Form styles (global) */
-form.form{max-width:520px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
-form label{font-weight:600;color:var(--muted)}
-form input, form textarea, form select{padding:10px;border:1px solid #e0e0e0;border-radius:6px;font-size:15px}
-form button{border:none;cursor:pointer}
-/* make native buttons match .btn styles */
-button.btn{display:inline-block;padding:10px 16px;border-radius:6px;text-decoration:none}
-button.btn.primary{background:var(--primary);color:#fff}
+  /* Form styles (global) */
+  form.form {
+    max-width: 520px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+  }
 
-/* Small utility */
-.text-center{text-align:center}
+  form label {
+    font-weight: 600;
+    color: var(--muted)
+  }
+
+  form input,
+  form textarea,
+  form select {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 15px
+  }
+
+  form button {
+    border: none;
+    cursor: pointer
+  }
+
+  /* make native buttons match .btn styles */
+  button.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none
+  }
+
+  button.btn.primary {
+    background: var(--primary);
+    color: #fff
+  }
+
+  /* Small utility */
+  .text-center {
+    text-align: center
+  }
 
   .topbar .contact {
     float: none;
@@ -221,5 +209,126 @@ button.btn.primary{background:var(--primary);color:#fff}
   .why-grid {
     flex-direction: column;
     gap: 8px
+  }
+}
+
+/* Make hero emoji larger and responsive */
+.hero-image {
+  font-size: 90px; /* larger emoji */
+  line-height: 1;
+  display: inline-block;
+  transform: translateZ(0); /* ensures crisp rendering on some browsers */
+}
+
+/* Slightly smaller on narrow screens */
+@media (max-width: 800px) {
+  .hero-image {
+    font-size: 80px;
+  }
+}
+
+/* Contact page styles (matches reference layout) */
+.contact-section {
+  padding: 64px 0;
+  background: linear-gradient(180deg, #fff 0%, #fbfbfb 100%);
+}
+
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 32px;
+  align-items: start;
+  padding: 8px 16px;
+}
+
+.contact-left h2 {
+  margin: 0 0 12px;
+  font-size: 28px;
+  color: var(--dark);
+}
+
+.contact-left .lead {
+  color: #666;
+  margin-bottom: 20px;
+  max-width: 420px;
+}
+
+.contact-info {
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+.info-row {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #f0f0f0;
+}
+
+.info-row:last-child { border-bottom: none; }
+
+.info-title {
+  min-width: 90px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.info-body a { color: var(--dark); text-decoration: none; }
+
+/* Card with form */
+.contact-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+.contact-card h3 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  color: var(--dark);
+}
+
+/* Inputs override for contact card */
+.contact-card .form input,
+.contact-card .form textarea {
+  border: 1px solid #e8e8e8;
+  padding: 12px 14px;
+  border-radius: 8px;
+  width: 100%;
+  background: #fff;
+  font-size: 15px;
+  color: #222;
+}
+
+.contact-card .form label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  display: block;
+  color: #444;
+}
+
+.contact-card .form button {
+  margin-top: 6px;
+  width: 100%;
+  padding: 12px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+/* Small screens: stack */
+@media (max-width: 920px) {
+  .contact-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-left {
+    order: 2;
+  }
+
+  .contact-right {
+    order: 1;
   }
 }
