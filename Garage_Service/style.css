@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
- font-family: Inter, Arial, sans-serif;
+  font-family: Inter, Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -52,14 +52,14 @@ body {
 
 .topbar .book {
   background: var(--primary);
-  color: #916b6b;
-  padding: 8px 12px;
+  color: #bd1010;
+  padding: 4px 10px;
 
 
 
-  border-radius: 4px;
+  border-radius: 0.5px;
   text-decoration: none;
-  margin-left: 12px
+  margin-left: 6px
 }
 
 .nav-wrap {
@@ -131,13 +131,10 @@ body {
 .site-footer {
   background: #111;
   color: #ddd;
-
-
-
   padding: 18px 0;
 }
 
-/* Make main take remaining space so footer stays at bottom */
+
 main {
   flex: 1;
 }
@@ -147,14 +144,14 @@ main {
   text-decoration: none
 }
 
-/* Responsive tweaks */
+
 @media(max-width:800px) {
   .hero-inner {
     flex-direction: column;
     text-align: center
   }
 
-  /* Form styles (global) */
+  
   form.form {
     max-width: 520px;
     margin: 0 auto;
@@ -182,7 +179,7 @@ main {
     cursor: pointer
   }
 
-  /* make native buttons match .btn styles */
+  
   button.btn {
     display: inline-block;
     padding: 10px 16px;
@@ -195,7 +192,7 @@ main {
     color: #fff
   }
 
-  /* Small utility */
+  
   .text-center {
     text-align: center
   }
@@ -212,22 +209,23 @@ main {
   }
 }
 
-/* Make hero emoji larger and responsive */
+
 .hero-image {
-  font-size: 90px; /* larger emoji */
+  font-size: 90px;
   line-height: 1;
   display: inline-block;
-  transform: translateZ(0); /* ensures crisp rendering on some browsers */
+  transform: translateZ(0);
+ 
 }
 
-/* Slightly smaller on narrow screens */
+
 @media (max-width: 800px) {
   .hero-image {
     font-size: 80px;
   }
 }
 
-/* Contact page styles (matches reference layout) */
+
 .contact-section {
   padding: 64px 0;
   background: linear-gradient(180deg, #fff 0%, #fbfbfb 100%);
@@ -257,7 +255,7 @@ main {
   background: #fff;
   border-radius: 8px;
   padding: 18px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
 }
 
 .info-row {
@@ -267,7 +265,9 @@ main {
   border-bottom: 1px dashed #f0f0f0;
 }
 
-.info-row:last-child { border-bottom: none; }
+.info-row:last-child {
+  border-bottom: none;
+}
 
 .info-title {
   min-width: 90px;
@@ -275,14 +275,17 @@ main {
   color: var(--dark);
 }
 
-.info-body a { color: var(--dark); text-decoration: none; }
+.info-body a {
+  color: var(--dark);
+  text-decoration: none;
+}
 
-/* Card with form */
+
 .contact-card {
   background: #fff;
   border-radius: 12px;
   padding: 22px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
 }
 
 .contact-card h3 {
@@ -291,7 +294,7 @@ main {
   color: var(--dark);
 }
 
-/* Inputs override for contact card */
+
 .contact-card .form input,
 .contact-card .form textarea {
   border: 1px solid #e8e8e8;
@@ -318,7 +321,7 @@ main {
   border-radius: 8px;
 }
 
-/* Small screens: stack */
+
 @media (max-width: 920px) {
   .contact-wrap {
     grid-template-columns: 1fr;
