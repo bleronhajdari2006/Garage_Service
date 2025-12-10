@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Now - Garage Service</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="site-header">
     <div class="topbar">
       <div class="container">
         <div class="logo">Garage Service</div>
         <div class="contact">
-          
         </div>
       </div>
     </div>
@@ -23,55 +24,113 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="service.html">Our Services</a></li>
+          <li><a href="about.html">About Us</a></li>
           <li><a href="login.html">Login/Register</a></li>
-          <li><a class="btn book" href="book.html">Book Now</a></li>
+          <li><a class="btn outline" href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <h1>Book an Appointment</h1>
-    <p>Fill out the form below and we'll contact you to confirm your booking.</p>
+  <main>
+    <section class="booking-section">
+      <div class="container booking-wrap">
+        <div class="booking-image" aria-hidden="true">
+          <div class="illustration">🚘</div>
+        </div>
 
-    <form id="bookingForm" class="form">
-      <label for="name">Full name</label>
-      <input id="name" name="name" type="text" required>
+        <div class="booking-card">
+          <h1 class="booking-title">Book an Appointment</h1>
+          <p class="booking-sub">Choose a service and pick a convenient date/time. We'll confirm your booking shortly.
+          </p>
 
-      <label for="phone">Phone</label>
-      <input id="phone" name="phone" type="tel" required>
+          <form id="bookingForm" class="form booking-form">
+            <div class="two-col">
+              <div>
+                <label for="bname">Full name</label>
+                <input id="bname" name="name" type="text" placeholder="Your full name" required>
+              </div>
+              <div>
+                <label for="bphone">Phone</label>
+                <input id="bphone" name="phone" type="tel" placeholder="048 280 106" required>
+              </div>
+            </div>
 
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email">
+            <label for="bemail">Email</label>
+            <input id="bemail" name="email" type="email" placeholder="you@example.com">
 
-      <label for="service">Service</label>
-      <select id="service" name="service" required>
-        <option value="">-- choose a service --</option>
-        <option value="oil">Oil Change</option>
-        <option value="brake">Brake Repair</option>
-        <option value="tire">Tire Replacement</option>
-      </select>
+            <label for="bservice">Service</label>
+            <select id="bservice" name="service">
+              <option value="oil">Oil Change</option>
+              <option value="brake">Brake Repair</option>
+              <option value="tire">Tire Replacement</option>
+            </select>
 
-      <label for="date">Preferred date</label>
-      <input id="date" name="date" type="date">
+            <div class="two-col">
+              <div>
+                <label for="bdate">Preferred date</label>
+                <input id="bdate" name="date" type="date">
+              </div>
+              <div>
+                <label for="btime">Preferred time</label>
+                <input id="btime" name="time" type="time">
+              </div>
+            </div>
 
-      <label for="time">Preferred time</label>
-      <input id="time" name="time" type="time">
+            <label for="bmessage">Notes</label>
+            <textarea id="bmessage" name="message" rows="4" placeholder="Any additional details"></textarea>
 
-      <label for="message">Notes / Message</label>
-      <textarea id="message" name="message" rows="4"></textarea>
-
-      <button class="btn primary" type="submit">Send Booking Request</button>
-    </form>
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Request Booking</button>
+              <button type="reset" class="btn ghost">Clear</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <div class="footer-left">&copy; 2025 Garage Service</div>
-     <div class="footer-right">Gjilan, lagjja Dardania• <a href="mailto:info@example.com">garageservice@gmail.com</a></div>
+      <div class="footer-right">
+        Gjilan, lagjja Dardania • <a href="mailto:garageservice@gmail.com">garageservice@gmail.com</a>
+        <span class="social" style="margin-left:12px; display:inline-flex; gap:10px; align-items:center;">
+          <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+            style="color:inherit; text-decoration:none;">
+
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path
+                d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.5A4.5 4.5 0 1112 18a4.5 4.5 0 010-9zm0 2a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM18.5 6a.9.9 0 110 1.8.9.9 0 010-1.8z" />
+            </svg>
+          </a>
+
+          <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+            style="color:inherit; text-decoration:none;">
+
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path
+                d="M22 12a10 10 0 10-11.5 9.9v-7H8.9v-3h1.6V9.4c0-1.6 1-2.5 2.4-2.5.7 0 1.4.1 1.4.1v1.6h-.8c-.8 0-1 .5-1 1v1.2h1.8l-.3 3h-1.5v7A10 10 0 0022 12z" />
+            </svg>
+          </a>
+
+          <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Twitter"
+            style="color:inherit; text-decoration:none;">
+
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path
+                d="M22 5.9c-.6.3-1.2.5-1.9.6.7-.4 1.2-1.1 1.4-1.9-.7.4-1.4.7-2.2.9C18.9 4.5 17.9 4 16.8 4c-1.7 0-3 1.4-3 3 0 .2 0 .4.1.6-2.5-.1-4.7-1.3-6.2-3.1-.3.5-.5 1.1-.5 1.8 0 1.1.6 2.1 1.6 2.7-.6 0-1.2-.2-1.7-.5v.1c0 1.6 1.1 2.9 2.6 3.2-.3.1-.7.1-1 .1-.3 0-.6 0-.9-.1.6 1.9 2.4 3.3 4.5 3.3-1.6 1.3-3.6 2-5.8 2-.4 0-.8 0-1.2-.1 2 1.3 4.4 2 7 2 8.4 0 13-7 13-13v-.6c.9-.6 1.6-1.3 2.2-2.1-.8.4-1.7.7-2.6.8z" />
+            </svg>
+          </a>
+        </span>
+      </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
